@@ -1,0 +1,127 @@
+[gd_scene load_steps=3 format=3 uid="uid://divg8wvbtdcvl"]
+
+[ext_resource type="Texture2D" uid="uid://bd8r73amyb0rl" path="res://img/board.jpg" id="1_jx2h1"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1arp8"]
+
+[node name="Interfaz" type="Control"]
+layout_mode = 3
+anchor_right = 1.111
+anchor_bottom = 1.481
+offset_right = 0.12793
+offset_bottom = 0.311951
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BotoneraArriba" type="HBoxContainer" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 128.0
+offset_bottom = 100.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="NuevoJugadorButton" type="Button" parent="BotoneraArriba"]
+layout_mode = 2
+text = "Añadir jugador"
+
+[node name="NuevoMaterialButton" type="Button" parent="BotoneraArriba"]
+layout_mode = 2
+text = "Material
+"
+
+[node name="PintarButton" type="Button" parent="BotoneraArriba"]
+layout_mode = 2
+text = "Pintar"
+
+[node name="RestartButton" type="Button" parent="BotoneraArriba"]
+layout_mode = 2
+text = "Limpiar"
+
+[node name="GuardarTodoButton" type="Button" parent="BotoneraArriba"]
+layout_mode = 2
+text = "Guardar"
+
+[node name="ExportarButton" type="Button" parent="BotoneraArriba"]
+layout_mode = 2
+text = "Exportar Video"
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_1arp8")
+
+[node name="Campo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = -156.5
+offset_right = 286.0
+offset_bottom = 156.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.76676, 2.39611)
+pivot_offset = Vector2(286, 157)
+texture = ExtResource("1_jx2h1")
+stretch_mode = 3
+
+[node name="BotoneraAbajo" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="AccionesEjeTiempo" type="HBoxContainer" parent="BotoneraAbajo"]
+layout_mode = 2
+alignment = 1
+
+[node name="EscenaAnteriorButton" type="Button" parent="BotoneraAbajo/AccionesEjeTiempo"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Anterior"
+
+[node name="PlayButton" type="Button" parent="BotoneraAbajo/AccionesEjeTiempo"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Play"
+
+[node name="PausaButton" type="Button" parent="BotoneraAbajo/AccionesEjeTiempo"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Pausa"
+
+[node name="EscenaSiguienteButton" type="Button" parent="BotoneraAbajo/AccionesEjeTiempo"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Siguiente"
+
+[node name="AñadirEscenaButton" type="Button" parent="BotoneraAbajo/AccionesEjeTiempo"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Añadir escena"
+
+[node name="GuardarEscenaButton" type="Button" parent="BotoneraAbajo/AccionesEjeTiempo"]
+layout_mode = 2
+text = "GuardarEscena"
+
+[node name="EjeTiempo" type="HBoxContainer" parent="BotoneraAbajo"]
+layout_mode = 2
+alignment = 1
+
+[node name="EsceneButton" type="Button" parent="BotoneraAbajo/EjeTiempo"]
+layout_mode = 2
+text = "1"
